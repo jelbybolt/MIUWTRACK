@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistroActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/fondregis"
+        android:contentDescription="Background Image" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <SearchView
+                android:id="@+id/searchViewRegistro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:queryHint="Buscar por número de registro"
+                android:layout_marginBottom="16dp"
+                android:iconifiedByDefault="false"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/nue"
+                android:gravity="center"
+                android:text="Registro de mascotas"
+                android:textColor="#FF9800"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:fontFamily="@font/parr"
+                android:gravity="center"
+                android:text="Registra a este pelud@ y activa el poder del rastreo MIuw. ¡Que empiece la aventura clínica!"
+                android:textColor="#FF9800"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#BA6B7128"
+                app:contentPadding="16dp"
+                app:strokeColor="@android:color/white"  app:strokeWidth="2dp">                 <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:fontFamily="@font/nue"
+                    android:gravity="center"
+                    android:text="Datos de la persona"
+                    android:textColor="#FFEB3B"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/namePersona"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/parr"
+                    android:hint="Nombre"
+                    android:inputType="textPersonName"
+                    android:minHeight="48dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+                <EditText
+                    android:id="@+id/dirPersona"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/parr"
+                    android:hint="Dirección"
+                    android:inputType="textPostalAddress"
+                    android:minHeight="48dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+                <EditText
+                    android:id="@+id/telPersona"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:hint="Teléfono"
+                    android:fontFamily="@font/parr"
+                    android:inputType="phone"
+                    android:minHeight="48dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+                <EditText
+                    android:id="@+id/emailPersona"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Correo Electrónico"
+                    android:fontFamily="@font/parr"
+                    android:inputType="textEmailAddress"
+                    android:minHeight="48dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+            </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#9DB1340C"
+                app:contentPadding="16dp"
+                app:strokeColor="@android:color/white"  app:strokeWidth="2dp">                 <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:fontFamily="@font/nue"
+                    android:gravity="center"
+                    android:text="Datos de la mascota"
+                    android:textColor="#FFEB3B"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/num_registro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:hint="No. Registro"
+                    android:fontFamily="@font/parr"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+                <EditText
+                    android:id="@+id/nombreMascota"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:hint="Nombre del Paciente"
+                    android:fontFamily="@font/parr"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+                <EditText
+                    android:id="@+id/edadMascota"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:hint="Edad"
+                    android:fontFamily="@font/parr"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:paddingStart="8dp"
+                    android:fontFamily="@font/parr"
+                    android:text="Género"
+                    android:textColor="#FFFFFF" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupGenero"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/parr"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioHembra"
+                        android:layout_width="0dp"
+                        android:fontFamily="@font/parr"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Hembra"
+                        android:textColor="@color/white" />
+
+                    <RadioButton
+                        android:id="@+id/radioMacho"
+                        android:layout_width="0dp"
+                        android:fontFamily="@font/parr"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Macho"
+                        android:textColor="@color/white" />
+                </RadioGroup>
+
+                <EditText
+                    android:id="@+id/especie_mascota"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:hint="Especie"
+                    android:fontFamily="@font/parr"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+                <EditText
+                    android:id="@+id/raza_mascota"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:hint="Raza"
+                    android:fontFamily="@font/parr"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+                <EditText
+                    android:id="@+id/color_mascota"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:hint="Color"
+                    android:fontFamily="@font/parr"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:paddingStart="8dp"
+                    android:fontFamily="@font/parr"
+                    android:text="Esterilizado"
+                    android:textColor="#FFFFFF" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupEsterilizado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="@font/parr"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioEsterilizadoSi"
+                        android:layout_width="0dp"
+                        android:fontFamily="@font/parr"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Sí"
+                        android:textColor="@color/white" />
+
+                    <RadioButton
+                        android:id="@+id/radioEsterilizadoNo"
+                        android:layout_width="0dp"
+                        android:fontFamily="@font/parr"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="No"
+                        android:textColor="@color/white" />
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="16dp">
+
+                    <LinearLayout
+                        android:id="@+id/layout_guardar_volver_buttons"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginBottom="8dp">
+
+                        <ImageButton
+                            android:id="@+id/boton_guardar"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="8dp"
+                            android:src="@mipmap/btnnsave"
+                            android:background="@android:color/transparent"
+                            android:scaleType="fitCenter"
+                            android:contentDescription="Guardar Datos"/>
+
+                        <ImageButton
+                            android:id="@+id/btnVolver"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:layout_marginStart="8dp"
+                            android:src="@mipmap/btnnvolver"
+                            android:background="@android:color/transparent"
+                            android:scaleType="fitCenter"
+                            android:contentDescription="Volver"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_modificar_eliminar_cancelar_buttons"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:visibility="gone">
+                        <ImageButton
+                            android:id="@+id/boton_modificar"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="8dp"
+                            android:src="@mipmap/btnnmodi"
+                            android:background="@android:color/transparent"
+                            android:scaleType="fitCenter"
+                            android:contentDescription="Modificar Datos"/>
+
+                        <ImageButton
+                            android:id="@+id/boton_eliminar"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="8dp"
+                            android:src="@mipmap/btnnelimi"
+                            android:background="@android:color/transparent"
+                            android:scaleType="fitCenter"
+                            android:contentDescription="Eliminar Datos"/>
+
+                        <ImageButton
+                            android:id="@+id/boton_cancelar"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:src="@mipmap/btnncancela"
+                            android:background="@android:color/transparent"
+                            android:scaleType="fitCenter"
+                            android:contentDescription="Cancelar"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/textViewModo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Modo: Nuevo registro"
+                    android:textStyle="italic"
+                    android:textColor="#FFFFFF"/>
+            </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

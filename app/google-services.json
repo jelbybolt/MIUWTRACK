@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "62499342952",
+    "firebase_url": "https://miuwtrackp-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "miuwtrackp",
+    "storage_bucket": "miuwtrackp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:62499342952:android:5520a335f59f16875509dd",
+        "android_client_info": {
+          "package_name": "com.example.miuwtrack"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCggeuLKBUzdl6C1QzPwEcINpm9hXYmhd0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

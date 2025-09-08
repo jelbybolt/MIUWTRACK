@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/fondconsult"
+    tools:context=".ConsultaActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+
+        <SearchView
+            android:id="@+id/searchViewRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:queryHint="Buscar por número de registro"
+            android:layout_marginBottom="16dp"
+            android:iconifiedByDefault="false"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            android:backgroundTint="#FFFCFC"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="#A68A4C21"
+            app:strokeColor="@android:color/white"
+            app:strokeWidth="2dp">
+            <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvPacienteInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/parr"
+                android:text="Nombre dueño:"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvMascotaInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mascota:"
+                android:textColor="@color/white"
+                android:fontFamily="@font/parr"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="#88688E2F"
+            app:cardElevation="4dp"
+            app:strokeColor="@android:color/white"  app:strokeWidth="2dp">                 <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvFecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/parr"
+                android:text="Fecha: "
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:textColorHint="@color/white"
+                android:hint="Tipo de procedimiento">
+
+                <AutoCompleteTextView
+                    android:id="@+id/actvTipoProcedimiento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/parr"
+                    android:textColor="@color/white"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:textColorHint="@color/white"
+                android:hint="Descripción detallada">
+
+                <EditText
+                    android:id="@+id/etDescripcion"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:fontFamily="@font/parr"
+                    android:gravity="start|top"
+                    android:textColor="@color/white"
+                    android:inputType="textMultiLine"
+                    android:minLines="4" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:textColorHint="@color/white"
+                android:hint="Medicamentos administrados">
+
+                <EditText
+                    android:id="@+id/etMedicamentos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/parr"
+                    android:textColor="@color/white"
+                    android:inputType="textCapSentences" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/white"
+                android:layout_marginBottom="16dp"
+                android:hint="Dosificación">
+
+                <EditText
+                    android:id="@+id/etDosificacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/parr"
+                    android:textColor="@color/white"
+                    android:inputType="" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="8dp">
+
+                <ImageButton
+                    android:id="@+id/btnGuardarProcedimiento"
+                    android:layout_width="160dp"
+                    android:layout_height="51dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="Guardar Procedimiento"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/btnnsave" />
+
+                <ImageButton
+                    android:id="@+id/btnVolver"
+                    android:layout_width="160dp"
+                    android:layout_height="51dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="Volver"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/btnnvolver" />
+            </LinearLayout>
+
+        </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Historial de Procedimientos"
+            android:fontFamily="@font/parr"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="#9EB33811"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="16dp"
+            app:strokeColor="@android:color/white"  app:strokeWidth="2dp">                 <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvProcedimientos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/parr"
+            android:padding="8dp" />
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</ScrollView>

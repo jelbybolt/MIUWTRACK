@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AgendaActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="Fondo de pantalla"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/agendfon" />
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="148dp"
+            android:gravity="end|top"
+            android:orientation="horizontal"
+            android:paddingTop="8dp"
+            android:paddingEnd="16dp">
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/gifImageView2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ardi" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="335dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="16dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/calendarCard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="0.8"
+                    android:gravity="center_horizontal"
+                    app:cardBackgroundColor="#B1FFC107"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="4dp"
+                    app:contentPadding="10dp"
+                    app:strokeColor="@android:color/white"
+                    app:strokeWidth="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textViewDayOfWeek"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:fontFamily="@font/nue"
+                            android:text="Miércoles"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/dateCircleContainer"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginBottom="5dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            app:cardBackgroundColor="#7A8506"
+                            app:cardCornerRadius="30dp"
+                            app:cardElevation="0dp"
+                            app:strokeColor="@android:color/white"
+                            app:strokeWidth="2dp">
+
+                            <TextView
+                                android:id="@+id/textViewDayNumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/nue"
+                                android:text="21"
+                                android:textColor="@android:color/white"
+                                android:textSize="25sp"
+                                android:textStyle="bold" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:id="@+id/textViewMonth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nue"
+                            android:text="Mayo"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="112dp"
+                    android:layout_weight="1.2"
+                    app:cardBackgroundColor="#ADFF9800"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="4dp"
+                    app:contentPadding="10dp"
+                    app:strokeColor="@android:color/white"
+                    app:strokeWidth="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/taskInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/parr"
+                            android:hint="Actividad..."
+                            android:layerType="software"
+                            android:padding="2dp"
+                            android:textColor="@android:color/white"
+                            android:textColorHint="@android:color/white"
+                            android:textSize="13dp" />
+
+                        <ImageButton
+                            android:id="@+id/agregar"
+                            android:layout_width="53dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="center"
+                            android:background="@android:color/transparent"
+                            android:contentDescription="Insertar"
+                            android:scaleType="fitCenter"
+                            android:src="@mipmap/btnin" />
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/taskListCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="#BEFF5722"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="4dp"
+                    app:contentPadding="20dp"
+                    app:strokeColor="@android:color/white"
+                    app:strokeWidth="2dp">
+
+                    <LinearLayout
+                        android:id="@+id/taskList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                </com.google.android.material.card.MaterialCardView>
+
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="16dp">
+
+                <ImageButton
+                    android:id="@+id/finishDayButton"
+                    android:layout_width="126dp"
+                    android:layout_height="53dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="Finish Day"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/btnnfinsh" />
+
+                <ImageButton
+                    android:id="@+id/backButton"
+                    android:layout_width="133dp"
+                    android:layout_height="48dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="Volver"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/btnnvolver" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

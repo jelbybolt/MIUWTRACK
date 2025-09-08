@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VeterinariosActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/fondomicue"
+        android:scaleType="centerCrop"
+        android:contentDescription="Fondo de pantalla" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="32dp"
+            android:gravity="center_horizontal|center_vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="60dp" />
+
+            <ImageView
+                android:id="@+id/user_icon"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginBottom="24dp"
+                android:contentDescription="Icono de usuario"
+                android:padding="8dp"
+                android:src="@mipmap/iconuser" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#A0333333"
+                app:contentPadding="12dp"
+                app:strokeColor="@android:color/white"
+                app:strokeWidth="2dp">
+
+                <TextView
+                    android:id="@+id/user_full_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre Completo del Usuario"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/parr"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="280dp" android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#A0333333"
+                app:contentPadding="12dp"
+                app:strokeColor="@android:color/white"
+                app:strokeWidth="2dp">
+
+                <TextView
+                    android:id="@+id/user_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="correo.usuario@example.com"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/parr"
+                    android:gravity="center" /> </com.google.android.material.card.MaterialCardView>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="280dp" android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#A0333333"
+                app:contentPadding="12dp"
+                app:strokeColor="@android:color/white"
+                app:strokeWidth="2dp">
+
+                <TextView
+                    android:id="@+id/user_password_placeholder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="**********"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/parr"
+                    android:gravity="center" /> </com.google.android.material.card.MaterialCardView>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="16dp">
+
+                <ImageButton
+                    android:id="@+id/btn_modificar_password"
+                    android:layout_width="150dp" android:layout_height="50dp"
+                    android:layout_marginEnd="16dp" android:background="@android:color/transparent"
+                    android:contentDescription="Modificar Contraseña"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/btnnmodi" />
+
+                <ImageButton
+                    android:id="@+id/btn_volver"
+                    android:layout_width="150dp" android:layout_height="50dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="Volver"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/btnnvolver" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btn_cerrar_sesion"
+                android:layout_width="wrap_content" android:layout_height="53dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="Cerrar Sesión"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/btnncerar" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="60dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
